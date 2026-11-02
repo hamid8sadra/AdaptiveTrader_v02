@@ -25,3 +25,15 @@
     "Values may be EMPTY_VALUE during warmup or when M1 source history is insufficient."
   ]
 }
+
+logic_levels:{
+    key1 = price , values1 = Q50;
+    key2 = price , values2 = QUP;
+    key3 = price , values3 = QDN;
+    key4 = price , values4 = Mode;
+
+    key5 = Mode , values5 = Q50;
+    key6 = Mode , values6 = QUP;
+    key7 = Mode , values7 = QDN;
+}
+back_test_inputs: [upper_quantile,lower_quantile,histogram_bins]

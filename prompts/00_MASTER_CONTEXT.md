@@ -18,7 +18,7 @@ strictly.
    - Names: classes `C<Name>`, structs `S<Name>`, enums `ENUM_<NAME>`, constants `UPPER_SNAKE`, member vars `m_<name>`, globals `g_<name>`.
    - Every public method has a `//---` comment: purpose, params, return.
    - Do NOT generate placeholder comments like "// TODO". Generate full code.
-   - Never use Comment() or Sleep() .
+   - Never use Comment().
    - Do not use ObjectCreate() for trading logic.
    - Do not invent APIs or use deprecated functions.
    - Files must be self-contained unless the task explicitly specifies existing project dependencies.
@@ -28,10 +28,11 @@ strictly.
 MQL/
    Experts/
       AdaptiveTrader/
-         EA_L1_<Name>.mq5
+         EA_L3_<Name>.mq5
    Indicators/
       AdaptiveTrader/
          Ind_<Name>.mq5
+         Ind_<Name>.md
 
 
 
