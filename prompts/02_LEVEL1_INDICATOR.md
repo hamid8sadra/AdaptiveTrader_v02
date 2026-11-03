@@ -252,6 +252,7 @@ Use this structure:
 
 {  
 "name": "<NAME>",  
+"description":"<description>",
 "iCustom_path": "Indicators\AdaptiveTrader\Ind_<NAME>",  
 "inputs_in_order": [  
 {"name": "<input_name>", "type": "<type>", "default": <value>, "range": "<valid range or constraints>"}  
@@ -271,7 +272,7 @@ Requirements:
 - Replace every placeholder with information from the generated indicator. Do not leave placeholders in the completed JSON.
     
 - Set `<NAME>` to the indicator name without the `Ind_` filename prefix.
-    
+- fill `<description>` with a short description of indicator. not longer than 50 char .
 - Set `iCustom_path` to the indicator path used by MQL5, including the `Ind_` filename prefix but without `.mq5` or `.md`.
     
 - List every declared indicator input in exact declaration order. Use valid JSON values for defaults, such as `60`, `true`, or `false`.

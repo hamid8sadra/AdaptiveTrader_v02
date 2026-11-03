@@ -1,6 +1,7 @@
 {
   "name": "WeightedPricePDF",
-  "iCustom_path": "Indicators\AdaptiveTrader\Ind_WeightedPricePDF",
+  "description":"A volume-weighted price distribution indicator that estimates price quantiles and the most populated price level over a rolling candle window.",
+  "iCustom_path": "AdaptiveTrader\Ind_WeightedPricePDF",
   "inputs_in_order": [
     {"name": "inp_period", "type": "int", "default": 60, "range": ">=30"},
     {"name": "upper_quantile", "type": "int", "default": 95, "range": "65-95"},
@@ -25,15 +26,15 @@
     "Values may be EMPTY_VALUE during warmup or when M1 source history is insufficient."
   ]
 }
-
+logic_count:7
 logic_levels:{
-    key1 = price , values1 = Q50;
-    key2 = price , values2 = QUP;
-    key3 = price , values3 = QDN;
-    key4 = price , values4 = Mode;
+    key1 = price , value1 = Q50;
+    key2 = price , value2 = QUP;
+    key3 = price , value3 = QDN;
+    key4 = price , value4 = Mode;
 
-    key5 = Mode , values5 = Q50;
-    key6 = Mode , values6 = QUP;
-    key7 = Mode , values7 = QDN;
+    key5 = Mode , value5 = Q50;
+    key6 = Mode , value6 = QUP;
+    key7 = Mode , value7 = QDN;
 }
 back_test_inputs: [upper_quantile,lower_quantile,histogram_bins]
