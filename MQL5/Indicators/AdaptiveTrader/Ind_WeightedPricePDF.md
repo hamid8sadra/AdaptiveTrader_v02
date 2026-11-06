@@ -26,15 +26,27 @@
     "Values may be EMPTY_VALUE during warmup or when M1 source history is insufficient."
   ]
 }
-logic_count:7
-logic_levels:{
-    key1 = price , value1 = Q50;
-    key2 = price , value2 = QUP;
-    key3 = price , value3 = QDN;
-    key4 = price , value4 = Mode;
 
-    key5 = Mode , value5 = Q50;
-    key6 = Mode , value6 = QUP;
-    key7 = Mode , value7 = QDN;
+  logic_count:7
+  logic_levels:{
+      key1 = price , value1 = Q50;
+      key2 = price , value2 = QUP;
+      key3 = price , value3 = QDN;
+      key4 = price , value4 = Mode;
+
+      key5 = Mode , value5 = Q50;
+      key6 = Mode , value6 = QUP;
+      key7 = Mode , value7 = QDN;
+  }
+  back_test_inputs: [upper_quantile,lower_quantile,histogram_bins]
+{
+  "calss_inputs":[
+      {"name": "symbol", "type": "string", "default": null, "range": null},
+      
+      {"name": "inp_period", "type": "int", "default": 60, "range": ">=30"},
+      {"name": "upper_quantile", "type": "int", "default": 95, "range": "65-95"},
+      {"name": "lower_quantile", "type": "int", "default": 5, "range": "5-35; always less than upper_quantile"},
+      {"name": "histogram_bins", "type": "int", "default": 100, "range": "5-100"},
+      {"name": "debug_mode", "type": "bool", "default": false, "range": "true or false"}
+  ]
 }
-back_test_inputs: [upper_quantile,lower_quantile,histogram_bins]

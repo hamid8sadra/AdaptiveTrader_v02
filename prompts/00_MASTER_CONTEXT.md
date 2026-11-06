@@ -28,12 +28,15 @@ strictly.
 MQL/
    Experts/
       AdaptiveTrader/
-         EA_L3_<Name>.mq5
+         EA_NBO_<Name>.mq5
    Indicators/
       AdaptiveTrader/
          Ind_<Name>.mq5
          Ind_<Name>.md
-
+   Include/
+      AdaptiveTrader/
+         IndC_<Name>.mqh
+         EAC_<Name>.mqh
 
 
 
