@@ -1,6 +1,6 @@
 read following files in order and follow instructions:{
     "prompts\00_MASTER_CONTEXT.md"
-    "prompts\04_EXPERTCLASS_01.md"
+    "prompts\04_EXPERTCLASS_02.md"
 }
 
 
